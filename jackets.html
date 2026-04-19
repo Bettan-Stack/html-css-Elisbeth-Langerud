@@ -22,14 +22,24 @@
           <img src="images/logos/Logo.png" alt="Rainy Days logo" class="logo-image" />
         </a>
 
+        <input type="checkbox" id="menu-toggle" />
+
+        <label for="menu-toggle" class="hamburger" aria-label="Open navigation menu">
+          ☰
+        </label>
+
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="jackets.html" aria-current="page">Jackets</a></li>
+          <li><a href="jackets.html">Jackets</a></li>
           <li><a href="coming-soon.html">About</a></li>
           <li><a href="coming-soon.html">Contact</a></li>
         </ul>
 
-        <a href="cart.html" class="cart-link">Cart (1)</a>
+        <a href="cart.html" class="cart-link" aria-current="page">
+          <span class="cart-text">Cart</span>
+          <span class="cart-icon" aria-hidden="true">🛒</span>
+          <span class="cart-count">(1)</span>
+        </a>
       </nav>
     </div>
   </header>
