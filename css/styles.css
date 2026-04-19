@@ -147,8 +147,8 @@ a {
 }
 
 .main-nav {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
 }
@@ -156,7 +156,7 @@ a {
 .logo {
   display: inline-block;
   text-decoration: none;
-  grid-column: 1;
+  margin-right: auto;
 }
 
 .logo-image {
@@ -170,16 +170,16 @@ a {
 
 .hamburger {
   display: block;
-  grid-column: 3;
-  justify-self: end;
   font-size: 2rem;
   line-height: 1;
   cursor: pointer;
+  order: 3;
 }
 
 .nav-links {
   display: none;
-  grid-column: 1 / -1;
+  order: 4;
+  width: 100%;
   list-style: none;
   flex-direction: column;
   gap: 1rem;
@@ -205,11 +205,10 @@ a {
 }
 
 .cart-link {
-  grid-column: 2;
-  justify-self: end;
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
+  order: 2;
 }
 
 .cart-text {
@@ -928,6 +927,7 @@ a {
 ========================= */
 @media (min-width: 768px) {
   .main-nav {
+    display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 2rem;
   }
@@ -938,6 +938,8 @@ a {
 
   .nav-links {
     display: flex;
+    order: 0;
+    width: auto;
     grid-column: 2;
     flex-direction: row;
     justify-content: center;
@@ -946,6 +948,7 @@ a {
   }
 
   .cart-link {
+    order: 0;
     grid-column: 3;
     justify-self: end;
   }
